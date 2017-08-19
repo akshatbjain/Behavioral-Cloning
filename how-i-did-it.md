@@ -1,5 +1,7 @@
 # **Behavioral Cloning**
 
+The output video can be seen [here](https://www.youtube.com/watch?v=yidhNS1pF3w&t=16s).
+
 ### Model Architecture and Training Strategy
 
 #### 1. An appropriate model architecture has been employed
