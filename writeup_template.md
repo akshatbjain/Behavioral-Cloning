@@ -1,40 +1,30 @@
-#**Behavioral Cloning** 
+# **Behavioral Cloning**
 
-[//]: # (Image References)
+### Model Architecture and Training Strategy
 
-[image1]: ./examples/placeholder.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
-
-###Model Architecture and Training Strategy
-
-####1. An appropriate model architecture has been employed
+#### 1. An appropriate model architecture has been employed
 
 My model consists of a convolution neural network with 5 convolutional layers 4 fully connected layers (this is the NVIDIA end-to-end learning model). The first three convolutional layers use a filter of size 5x5, a stride of 2x2 and depths of 24, 36 and 48. The last two convolutional layers use a filter of size 3x3, no stride and depths of 64 and 64. The fully connected layers are of sizes 1164, 100, 50 and 10. 
 
 The model includes RELU layers to introduce nonlinearity. The data is normalized in the model using a Keras lambda layer. The incoming image is cropped from the top and bottom by 60 and 25 pixels respectively using a Keras Cropping2D layer.
 
-####2. Attempts to reduce overfitting in the model
+#### 2. Attempts to reduce overfitting in the model
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
-####3. Model parameter tuning
+#### 3. Model parameter tuning
 
 The model used an adam optimizer, so the learning rate was not tuned manually.
 
-####4. Appropriate training data
+#### 4. Appropriate training data
 
 Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road and recorded the data for multiple laps.
 
 For details about how I created the training data, see the next section. 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. Solution Design Approach
+#### 1. Solution Design Approach
 
 The overall strategy for deriving a model architecture was to try out different pre-existing network architectures, analyse their performances and then modify them accordingly.
 
@@ -46,7 +36,7 @@ The final step was to run the simulator to see how well the car was driving arou
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
-####2. Creation of the Training Set & Training Process
+#### 2. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to get back on track if it goes off. I then turned the car around and repeated the same process while driving in the opposite direction. This was done as the first track has a left bias so in order to generalize the data I recorded data in the opposite direction too.
 
