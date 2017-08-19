@@ -1,5 +1,7 @@
 # Behaviorial Cloning Project
 
+The output video can be seen [here](https://www.youtube.com/watch?v=yidhNS1pF3w&t=16s).
+
 ### Dependencies
 This project requires:
 
