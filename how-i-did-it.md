@@ -1,5 +1,16 @@
 # **Behavioral Cloning**
 
+[//]: # (Image References)
+
+[image1]: ./images/NVIDIA-end-to-end-learning-model.png "NVIDIA model"
+[image2]: ./images/center.jpg "Camera view when car is in center of the road"
+[image3]: ./images/off-1.jpg "Camera view when car is recovering - 1"
+[image4]: ./images/off-2.jpg "Camera view when car is recovering - 2"
+[image5]: ./images/off-3.jpg "Camera view when car is recovering - 3"
+[image6]: ./images/off-4.jpg "Camera view when car is recovering - 4"
+[image7]: ./images/off-5.jpg "Camera view when car is recovering - 5"
+[image8]: ./images/off-6.jpg "Camera view when car is recovering - 6"
+
 The output video can be seen [here](https://www.youtube.com/watch?v=yidhNS1pF3w&t=16s).
 
 ### Model Architecture and Training Strategy
@@ -7,6 +18,10 @@ The output video can be seen [here](https://www.youtube.com/watch?v=yidhNS1pF3w&
 #### 1. An appropriate model architecture has been employed
 
 My model consists of a convolution neural network with 5 convolutional layers 4 fully connected layers (this is the NVIDIA end-to-end learning model). The first three convolutional layers use a filter of size 5x5, a stride of 2x2 and depths of 24, 36 and 48. The last two convolutional layers use a filter of size 3x3, no stride and depths of 64 and 64. The fully connected layers are of sizes 1164, 100, 50 and 10. 
+
+Figure below shows the NVIDIA end-to-end learning model that I used for this project:
+
+![alt text][image1]
 
 The model includes RELU layers to introduce nonlinearity. The data is normalized in the model using a Keras lambda layer. The incoming image is cropped from the top and bottom by 60 and 25 pixels respectively using a Keras Cropping2D layer.
 
@@ -42,7 +57,17 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 #### 2. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to get back on track if it goes off. I then turned the car around and repeated the same process while driving in the opposite direction. This was done as the first track has a left bias so in order to generalize the data I recorded data in the opposite direction too.
+To capture good driving behavior, I first recorded two laps on track one using center lane driving as shown in image below:
+
+![alt text][image2]
+
+I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to get back on track if it goes off as shown in images below: 
+
+![alt text][image3] ![alt text][image4]
+![alt text][image5] ![alt text][image6]
+![alt text][image7] ![alt text][image8]
+
+I then turned the car around and repeated the same process while driving in the opposite direction. This was done as the first track has a left bias so in order to generalize the data I recorded data in the opposite direction too.
 
 Then I repeated this process on track two in order to get more data points and make it more generic.
 
