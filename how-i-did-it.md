@@ -2,7 +2,7 @@
 
 [//]: # (Image References)
 
-[image1]: ./images/NVIDIA-end-to-end-learning-model.png "NVIDIA model"
+[image1]: ./images/NVIDIA-end-to-end-learning-model.PNG "NVIDIA model"
 [image2]: ./images/center.jpg "Camera view when car is in center of the road"
 [image3]: ./images/off-1.jpg "Camera view when car is recovering - 1"
 [image4]: ./images/off-2.jpg "Camera view when car is recovering - 2"
@@ -19,7 +19,7 @@ The output video can be seen [here](https://www.youtube.com/watch?v=yidhNS1pF3w&
 
 My model consists of a convolution neural network with 5 convolutional layers 4 fully connected layers (this is the NVIDIA end-to-end learning model). The first three convolutional layers use a filter of size 5x5, a stride of 2x2 and depths of 24, 36 and 48. The last two convolutional layers use a filter of size 3x3, no stride and depths of 64 and 64. The fully connected layers are of sizes 1164, 100, 50 and 10. 
 
-Figure below shows the NVIDIA end-to-end learning model that I used for this project:
+Figure below shows the NVIDIA end-to-end learning model that I used for this project (Reference: [End to End Learning for Self-Driving Cars](https://arxiv.org/pdf/1604.07316.pdf)):
 
 ![alt text][image1]
 
