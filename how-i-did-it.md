@@ -14,6 +14,8 @@ The model includes RELU layers to introduce nonlinearity. The data is normalized
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
+I had initially added dropout layers to the model in order to reduce overfitting (this can be seen in model.py as the dropout layers have now been commented out). Then, I tried to train the model without the dropout layers and found that it worked well even without dropout. This basically shows the robustness of the model as it doesn't need additional dropout layers to reduce overfitting. Even in the original NVIDIA model there are no dropout layers and thus I decided to remove the dropout layers.
+
 #### 3. Model parameter tuning
 
 The model used an adam optimizer, so the learning rate was not tuned manually.
