@@ -2,7 +2,8 @@
 
 [//]: # (Image References)
 
-[image1]: ./images/NVIDIA-end-to-end-learning-model.PNG "NVIDIA model"
+[image0]: ./images/NVIDIA-end-to-end-learning-model.PNG "NVIDIA model"
+[image1]: ./images/final-model.png "Final model"
 [image2]: ./images/center.jpg "Camera view when car is in center of the road"
 [image3]: ./images/off-1.jpg "Camera view when car is recovering - 1"
 [image4]: ./images/off-2.jpg "Camera view when car is recovering - 2"
@@ -21,9 +22,13 @@ My model consists of a convolution neural network with 5 convolutional layers 4 
 
 Figure below shows the NVIDIA end-to-end learning model that I used for this project (Reference: [End to End Learning for Self-Driving Cars](https://arxiv.org/pdf/1604.07316.pdf)):
 
-![alt text][image1]
+![alt text][image0]
 
 The model includes RELU layers to introduce nonlinearity. The data is normalized in the model using a Keras lambda layer. The incoming image is cropped from the top and bottom by 60 and 25 pixels respectively using a Keras Cropping2D layer.
+
+My final model was as shown in figure below:
+
+![alt text][image1]
 
 #### 2. Attempts to reduce overfitting in the model
 
